@@ -1,0 +1,32 @@
+/* IMPORT DES FICHIER SASS */
+
+/* function des couleur*/
+@import 'utiles/functionColor';
+/* ajout du mixin (stockage de groupe de code) */
+@import 'utiles/mixin';
+/* animation */
+@import 'utiles/animations';
+/* ajout des variable */
+@import 'utiles/variable';
+
+
+@import 'general/minireset';
+/* ajout des base du body*/
+@import 'general/bodybase';
+/* typographi (h1 h2 ect */
+@import 'general/typical';
+
+/* ajout des balise globale */
+@import 'compenent/global';
+
+/* header */
+@import 'layout/header';
+/* ajout du main  */
+@import 'layout/main';
+/* footer */
+@import 'layout/footer';
+
+/* page principal de ohmyfood */
+@import 'generalPage/index';
+/* different restaurant */
+@import 'generalPage/restaurant';

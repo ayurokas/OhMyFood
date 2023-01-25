@@ -1,0 +1,180 @@
+/* AJOUT DU SCSS POUR LA PAGE INDEX (ohmyfood) */
+
+.location {
+    background-color: lightdark(10);
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__active {
+        color: lightdark(20, $colour-black);
+        padding-right: 1em;
+        &__icon {
+            padding-right: 0.8em;
+        }
+    }
+}
+
+.infobox-howto {
+    @include responsive-tablet {
+        display: flex;
+    }
+}
+
+.infobox {
+    background-color: lightdark(5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    padding: 2.5em 0 3.5em 0;
+    &__title {
+        padding: 0 2.8em;
+    }
+    &__subtitle {
+        color: lightdark(40, $colour-black);
+        padding: 0 2em 1em 2em;
+    }
+
+    @include responsive-tablet {
+        background-color: $colour-white;
+        flex: 1 0 34%;
+        border-right: 3px solid lightdark(5);
+    }
+
+}
+
+.howto {
+    &__container {
+        @include container-base;
+
+        @include responsive-desktop {
+            @include container-max-width
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1.2em;
+            margin-left: 0.6em;
+
+            @include responsive-desktop {
+                flex-flow: row nowrap;
+                margin-left: 0;
+            }
+
+            &__item {
+                display: flex;
+                gap: 1.2em;
+                align-items: center;
+                justify-self: flex-end;
+                width: 100%;
+                border-radius: 1em;
+                padding: 1.5em 2em;
+                background-color: $colour-white;
+                @include shadow;
+
+                @include responsive-desktop {
+                    width: 33%;
+                    margin-left: 0.6em;
+                }
+
+                &__number {
+                    position: absolute;
+                    left: -0.8em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-width: 24px;
+                    height: 24px;
+                    border-radius: 100%;
+                    color: $colour-white;
+                    background-color: $colour-primary;
+                }
+                & i {
+                    color: lightdark(40);
+                    transition: all 300ms;
+                }
+                transition: all 300ms;
+                &:hover {
+                    background-color: lightdark(35, $colour-primary);
+                    @include shadow(lightdark(20));
+                    & i {
+                        color: $colour-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.restaurant {
+    background-color: lightdark(5);
+    &__container {
+        @include container-base;
+        
+        @include responsive-desktop {
+            @include container-max-width
+        }
+        
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+
+            @include responsive-desktop {
+                flex-flow: row wrap;
+            }
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                border-radius: 1em;
+                background-color: $colour-white;
+                @include shadow;
+                transition: all 300ms;
+                &:hover{
+                    @include shadow($colour-primary, 10);
+                }
+
+                @include responsive-desktop {
+                    flex: 1 0 34%;
+                }
+
+                &__new {
+                    background-color: $colour-accent;
+                    color: lightdark(40, $colour-accent);
+                    position: absolute;
+                    align-self: flex-end;
+                    padding: 0.4em 0.8em;
+                    margin: 0.8em 0.8em 0 0;
+                    border-radius: 0.2em;
+                }
+                &__img {
+                    width: 100%;
+                    height: 175px;
+                    object-fit: cover;
+                    object-position: 50% 60%;
+                    border-radius: 1em 1em 0 0;
+                }
+                &__footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 1em;
+                    &__text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.3em;
+                        &__location {
+                            color: lightdark(40, $colour-black);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
