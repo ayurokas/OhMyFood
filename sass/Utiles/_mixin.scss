@@ -1,0 +1,97 @@
+@mixin gradient_s-to-p {
+    background-color: $colour-secondary;
+    background-image: linear-gradient(transparent, $colour-primary);
+}
+
+@mixin shadow($colour: $colour-white, $intensity: 20, $size: 0.4em){
+    filter: drop-shadow(0 0 $size lightdark($intensity, $colour));
+}
+
+@mixin btn {
+    min-width: 170px;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    border: none;
+    color: $colour-white;
+    cursor: pointer;
+    @include gradient_s-to-p();
+    @include shadow;
+    transition: filter 500ms, background-color 300ms 200ms;
+    &--icon {
+        padding: 0.6em;
+        border-radius: 100%;
+        min-width: 2.5em;
+        height: 2.5em;
+    }
+    &:hover {
+        @include shadow(lightdark(20));
+        background-color: lighten($colour-secondary, 10);
+    }
+}
+
+@mixin container-base {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 3em 1em 4em 1em;
+}
+
+@mixin noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+@mixin like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &--empty {
+        opacity: 1;
+        color: lightdark(40);
+        transition: opacity 1500ms ease-in-out;
+    }
+    &--full {
+        opacity: 0;
+        position: absolute;
+        color: $colour-primary;
+        transform: scale(0);
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+    &:hover {
+        :nth-child(1) {
+            opacity: 1;
+            transform: scale(1);
+        }
+        :nth-child(2) {
+            opacity: 0;
+        }
+    }
+}
+
+@mixin responsive-tablet {
+    @media screen   and (min-width: map-get($breakpoints, tablet))
+                    and (max-width: map-get($breakpoints, tablet-max)){
+        @content;
+    }
+}
+@mixin responsive-desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+@mixin container-max-width($max-width: 1600px) {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+@mixin texthidden {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
