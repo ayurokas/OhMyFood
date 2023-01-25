@@ -136,9 +136,6 @@
                 background-color: $colour-white;
                 @include shadow;
                 transition: all 300ms;
-                &:hover{
-                    @include shadow($colour-primary, 10);
-                }
 
                 @include responsive-desktop {
                     flex: 1 0 34%;

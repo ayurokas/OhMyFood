@@ -475,9 +475,6 @@ main {
   filter: drop-shadow(0 0 0.4em #cccccc);
   transition: all 300ms;
 }
-.restaurant_container_cards_item:hover {
-  filter: drop-shadow(0 0 0.4em #ae80e5);
-}
 @media screen and (min-width: 1000px) {
   .restaurant_container_cards_item {
     flex: 1 0 34%;
