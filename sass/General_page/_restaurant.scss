@@ -1,0 +1,128 @@
+/* AJOUT DU SCSS POUR LES PAGE RESTAURANTS */
+
+.restimg {
+    height: 20em;
+    width: 100%;
+    object-fit: cover;
+}
+
+.restmenu {
+    position: relative;
+    padding: 2em 1em 3em 1em;
+    margin-top: -4em;
+    background-color: lightdark(5);
+    border-radius: 2em 2em 0 0;
+    &__container {
+
+        @include responsive-desktop {
+            @include container-max-width;
+        }
+
+        &__title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 1em;
+
+        }
+        &__menu {
+            padding-bottom: 3em;
+
+            :nth-child(1) {
+                animation-delay: 100ms;
+            }
+            :nth-child(2) {
+                animation-delay: 300ms;
+            }
+            :nth-child(3) {
+                animation-delay: 500ms;
+            }
+
+            @include responsive-desktop {
+                display: flex;
+                gap: 1em;
+            }
+
+            &__part {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                min-width: 0;
+
+                @include responsive-desktop {
+                    flex: 1 0 26%;
+                }
+
+                animation: menupart-fadein 1s cubic-bezier(0.7, 0, 0.9, 0.9) both;
+
+                &__title {
+                    position: relative;
+                    padding: 2em 0 0.5em 0;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        height: 3px;
+                        width: 2.5em;
+                    }
+                }
+                .card {
+                    display: flex;
+                    align-items: stretch;
+                    border-radius: 1em;
+                    background-color: $colour-white;
+                    overflow: hidden;
+                    cursor: pointer;
+                    @include shadow;
+                    transition: filter 300ms;
+                    &:hover {
+                        .card__check {
+                            margin-right: 0;
+                            i {
+                                animation: rotation-360 500ms 200ms;
+                                animation-iteration-count: 1;
+                            }
+                        }
+                    }
+                    &__container {
+                        display: flex;
+                        padding: 0.7em;
+                        gap: 1em;
+                        flex: 1;
+                        min-width: 0;
+                        &__text {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.2em;
+                            flex: 1;
+                            @include texthidden;
+                            &__title, &__note {
+                                @include texthidden;
+                            }
+                        }
+                        &__price {
+                            align-self: flex-end;
+                        }
+                    }
+                    &__check {
+                        display: flex;
+                        margin-right: -3.5em;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 0 1em 1em 0;
+                        min-width: 3.5em;
+                        color: $colour-white;
+                        background-color: $colour-accent;
+                        transition: margin-right 500ms ease-in-out;
+                    }
+                }
+            }
+        }
+        &__tocart {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    
+}

@@ -12,7 +12,7 @@
 
 @import 'general/minireset';
 /* ajout des base du body*/
-@import 'general/bodybase';
+@import 'general/bodyGeneral';
 /* typographi (h1 h2 ect */
 @import 'general/typical';
 
@@ -27,6 +27,6 @@
 @import 'layout/footer';
 
 /* page principal de ohmyfood */
-@import 'generalPage/index';
+@import 'General_page/index';
 /* different restaurant */
-@import 'generalPage/restaurant';
+@import 'General_page/restaurant';
