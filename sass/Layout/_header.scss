@@ -14,16 +14,6 @@ header {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0.4em 0.4em -0.4em rgba(0, 0, 0, 0.25);
-
-    // Passe le logo à gauche quand la barre de recherche est active
-    // @include responsive-desktop {
-    //     justify-content: space-between;
-    //     padding: 0 3.5em;
-    // }
-    
-    &_logo:hover {
-        animation: tilt-shaking 200ms;
-        animation-iteration-count: 2;
     }
     &_searchbar {
         display: none;
