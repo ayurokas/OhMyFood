@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+}
+h1, h4, h5 {
+    font-family: 'Shrikhand', cursive;
+}
+
+// FONT-WEIGHT
+
+h2, h3 {
+    font-weight: 700;
+}
+.btn {
+    font-weight: 600;
+}
+h1, .howtotext, .font-small--500, .card_price, .card_title {
+    font-weight: 500;
+}
+h6, .infobox_subtitle, .card_note {
+    font-weight: 300;
+}
+
+// FONT-SIZE
+
+h3, h4 {
+    font-size: 1.2em;
+}
+h1 {
+    font-size: 2em;
+}
+h2, .like {
+    font-size: 1.5em;
+}
+h5 {
+    font-size: 1.6em;
+}
+.checkicon, .header i {
+    font-size: 1.3em;
+}
+.footer i {
+    font-size: 0.8em;
+}
+.infobox__subtitle {
+    font-size: 1.1em;
+}
+.btn {
+    font-size: 0.95em;
+}
+.font-small--500, .card_price, .card_note {
+    font-size: 0.9em;
+}
+.card_title {
+    font-size: 1.07em;
+}
+
+// TRANSFORM
+
+h6 {
+    text-transform: uppercase;
+}

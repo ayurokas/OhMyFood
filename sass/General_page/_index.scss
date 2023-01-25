@@ -6,10 +6,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    &__active {
+    &_active {
         color: lightdark(20, $colour-black);
         padding-right: 1em;
-        &__icon {
+        &_icon {
             padding-right: 0.8em;
         }
     }
@@ -30,10 +30,10 @@
     text-align: center;
     gap: 1em;
     padding: 2.5em 0 3.5em 0;
-    &__title {
+    &_title {
         padding: 0 2.8em;
     }
-    &__subtitle {
+    &_subtitle {
         color: lightdark(40, $colour-black);
         padding: 0 2em 1em 2em;
     }
@@ -47,14 +47,14 @@
 }
 
 .howto {
-    &__container {
+    &_container {
         @include container-base;
 
         @include responsive-desktop {
             @include container-max-width
         }
 
-        &__cards {
+        &_cards {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -66,7 +66,7 @@
                 margin-left: 0;
             }
 
-            &__item {
+            &_item {
                 display: flex;
                 gap: 1.2em;
                 align-items: center;
@@ -82,7 +82,7 @@
                     margin-left: 0.6em;
                 }
 
-                &__number {
+                &_number {
                     position: absolute;
                     left: -0.8em;
                     display: flex;
@@ -113,14 +113,14 @@
 
 .restaurant {
     background-color: lightdark(5);
-    &__container {
+    &_container {
         @include container-base;
         
         @include responsive-desktop {
             @include container-max-width
         }
         
-        &__cards {
+        &_cards {
             display: flex;
             flex-direction: column;
             gap: 1.5em;
@@ -129,7 +129,7 @@
                 flex-flow: row wrap;
             }
 
-            &__item {
+            &_item {
                 display: flex;
                 flex-direction: column;
                 border-radius: 1em;
@@ -144,7 +144,7 @@
                     flex: 1 0 34%;
                 }
 
-                &__new {
+                &_new {
                     background-color: $colour-accent;
                     color: lightdark(40, $colour-accent);
                     position: absolute;
@@ -153,23 +153,23 @@
                     margin: 0.8em 0.8em 0 0;
                     border-radius: 0.2em;
                 }
-                &__img {
+                &_img {
                     width: 100%;
                     height: 175px;
                     object-fit: cover;
                     object-position: 50% 60%;
                     border-radius: 1em 1em 0 0;
                 }
-                &__footer {
+                &_footer {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     padding: 1em;
-                    &__text {
+                    &_text {
                         display: flex;
                         flex-direction: column;
                         gap: 0.3em;
-                        &__location {
+                        &_location {
                             color: lightdark(40, $colour-black);
                         }
                     }
