@@ -1,0 +1,29 @@
+.footer {
+    background-color: lightdark(20, $colour-black);
+    &_container {
+        padding: 1.5em 1.5em 2em 1.5em;
+        color: $colour-white;
+
+        @include responsive-desktop {
+            @include container-max-width;
+        }
+
+        &_title {
+            padding-bottom: 1em;
+        }
+        &_list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            &_item a {
+                color: $colour-white;
+                &:hover {
+                    color: $colour-accent;
+                }
+            }
+            &_item i {
+                width: 1.8em;
+            }
+        }
+    }
+}

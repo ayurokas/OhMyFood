@@ -1,0 +1,10 @@
+@function lightdark($percent: 20, $colour: $colour-white, $condition: 65) {
+    @if (lightness($colour) < $condition) {
+
+        @return lighten($colour, $percent);
+    } 
+    @else { 
+        
+        @return darken($colour, $percent);
+    }
+}

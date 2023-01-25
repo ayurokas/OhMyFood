@@ -1,0 +1,66 @@
+header {
+    position: fixed;
+    top: 0;
+    height: 4.25em;
+    min-width: 320px;
+    width: 100%;
+    z-index: 30;
+}
+
+.header {
+    background-color: $colour-white;
+    padding: 0 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.4em 0.4em -0.4em rgba(0, 0, 0, 0.25);
+
+    // Passe le logo à gauche quand la barre de recherche est active
+    // @include responsive-desktop {
+    //     justify-content: space-between;
+    //     padding: 0 3.5em;
+    // }
+    
+    &_logo:hover {
+        animation: tilt-shaking 200ms;
+        animation-iteration-count: 2;
+    }
+    &_searchbar {
+        display: none;
+
+        @include responsive-desktop {
+            display: flex;
+            height: 60%;
+            gap: 1em;
+        }
+
+        &_icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: lightdark(40, $colour-black);
+        }
+        &_input {
+            width: 20em;
+            border: none;
+            border-bottom: 1px solid lightdark();
+            padding: 0 1em;
+            border-radius: 0.5em 0.5em 0 0;
+            &:focus {
+                border-bottom: 1px solid $colour-primary;
+                background-color: lightdark(35, $colour-primary);
+                outline: none;
+            }
+        }
+    }
+    &_return {
+        position: absolute;
+        left: 1.5em;
+        transform: scale(1);
+        transition: transform 400ms;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
