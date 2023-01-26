@@ -1,25 +1,10 @@
+@charset "UTF-8";
 /* IMPORT DES FICHIER SASS */
 /* function des couleur*/
 /* ajout du mixin (stockage de groupe de code) */
 /* animation */
+/* animation du valide dans les menu restaurant */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-@keyframes tilt-shaking {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(3deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-3deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 @keyframes rotation-360 {
   0% {
     transform: rotate(0deg);
@@ -28,12 +13,14 @@
     transform: rotate(360deg);
   }
 }
+/* animation qui rend progressivement un élément invisible en diminuant sa opacité de 100% à 0% et en cachant l'élément en question.*/
 @keyframes fade-out {
   100% {
     opacity: 0;
     visibility: hidden;
   }
 }
+/* animation qui rend progressivement un élément visible en augmentant son opacité de 0% à 100% et en augmentant sa taille de 0.3 à 1.*/
 @keyframes menupart-fadein {
   0% {
     opacity: 0%;
