@@ -1,3 +1,5 @@
+/* regrouper des règles CSS réutilisables en un seul endroit pour une utilisation ultérieure dans le code. */
+
 @mixin gradient_s-to-p {
     background-color: $colour-secondary;
     background-image: linear-gradient(transparent, $colour-primary);
@@ -36,7 +38,7 @@
     padding: 3em 1em 4em 1em;
 }
 
-@mixin noselect {
+@mixin header_title{
     -webkit-touch-callout: none; /* iOS Safari */
         -webkit-user-select: none; /* Safari */
         -khtml-user-select: none; /* Konqueror HTML */
@@ -45,6 +47,7 @@
                 user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
 }
+/* scss du like */
 
 @mixin like {
     display: flex;
@@ -73,13 +76,14 @@
         }
     }
 }
-
+/* ajout du responsive pour la tablette */
 @mixin responsive-tablet {
     @media screen   and (min-width: map-get($breakpoints, tablet))
                     and (max-width: map-get($breakpoints, tablet-max)){
         @content;
     }
-}
+} 
+/* ajout du responsive pour le desktop */
 @mixin responsive-desktop {
     @media screen and (min-width: map-get($breakpoints, desktop)){
         @content;
@@ -90,6 +94,7 @@
     margin: 0 auto;
 }
 
+/*style pour les element cache */
 @mixin texthidden {
     overflow: hidden;
     white-space: nowrap;

@@ -5,8 +5,8 @@ a {
 .btn {
     @include btn;
 }
-.noselect {
-    @include noselect;
+.header_title {
+    @include header_title;
 }
 .like {
     @include like;

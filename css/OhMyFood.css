@@ -2,6 +2,11 @@
 /* IMPORT DES FICHIER SASS */
 /* function des couleur*/
 /* ajout du mixin (stockage de groupe de code) */
+/* regrouper des règles CSS réutilisables en un seul endroit pour une utilisation ultérieure dans le code. */
+/* scss du like */
+/* ajout du responsive pour la tablette */
+/* ajout du responsive pour le desktop */
+/*style pour les element cache */
 /* animation */
 /* animation du valide dans les menu restaurant */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
@@ -169,7 +174,7 @@ h5 {
   font-size: 0.8em;
 }
 
-.infobox_subtitle {
+.infobox__subtitle {
   font-size: 1.1em;
 }
 
@@ -224,7 +229,7 @@ a {
   background-color: #fface8;
 }
 
-.noselect {
+.header_title {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
   -moz-user-select: none; /* Old versions of Firefox */
