@@ -3,6 +3,7 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
 /* animation qui rend progressivement un élément invisible en diminuant sa opacité de 100% à 0% et en cachant l'élément en question.*/
 @keyframes fade-out {
     100% { 
@@ -10,6 +11,22 @@
         visibility: hidden;
     }
 }
+
+/* animation de loader spinner.*/
+@keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+
 /* animation qui rend progressivement un élément visible en augmentant son opacité de 0% à 100% et en augmentant sa taille de 0.3 à 1.*/
 @keyframes menupart-fadein {
     0% { opacity: 0%; transform: scale(0.3); }
