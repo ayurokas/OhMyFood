@@ -227,7 +227,7 @@ a {
 .like--full {
   opacity: 0;
   position: absolute;
-  color: #9356DC;
+  color: #FF79DA;
   transform: scale(0);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
@@ -544,7 +544,6 @@ main {
 }
 
 /* different restaurant */
-/* AJOUT DU SCSS POUR LES PAGE RESTAURANTS */
 .restimg {
   height: 20em;
   width: 100%;
@@ -611,6 +610,7 @@ main {
   bottom: 0;
   height: 3px;
   width: 2.5em;
+  border-bottom: 3px solid #99E2D0;
 }
 .restmenu_container_menu_part .card {
   display: flex;
@@ -621,6 +621,9 @@ main {
   cursor: pointer;
   filter: drop-shadow(0 0 0.4em #cccccc);
   transition: filter 300ms;
+}
+.restmenu_container_menu_part .card:hover {
+  filter: drop-shadow(0 0 0.4em #b0e8da);
 }
 .restmenu_container_menu_part .card:hover .card_check {
   margin-right: 0;

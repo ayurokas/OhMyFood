@@ -62,7 +62,7 @@
     &--full {
         opacity: 0;
         position: absolute;
-        color: $colour-primary;
+        color: $colour-secondary;
         transform: scale(0);
         transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     }
