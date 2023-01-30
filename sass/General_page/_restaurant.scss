@@ -71,18 +71,8 @@
                     background-color: $colour-white;
                     overflow: hidden;
                     cursor: pointer;
-                    @include shadow;
                     transition: filter 300ms;
-                    &:hover {
-                        @include shadow(lighten($colour-accent, 50));
-                        .card_check {
-                            margin-right: 0;
-                            i {
-                                animation: rotation-360 500ms 200ms;
-                                animation-iteration-count: 1;
-                            }
-                        }
-                    }
+                    
                     &_container {
                         display: flex;
                         padding: 0.7em;
