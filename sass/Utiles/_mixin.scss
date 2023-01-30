@@ -1,14 +1,17 @@
 /* regrouper des règles CSS réutilisables en un seul endroit pour une utilisation ultérieure dans le code. */
 
+/* Le mixin "gradient_s-to-p" regroupe des règles CSS pour un fond dégradé allant du couleur secondaire au couleur primaire. */
 @mixin gradient_s-to-p {
     background-color: $colour-secondary;
     background-image: linear-gradient(transparent, $colour-primary);
 }
 
-@mixin shadow($colour: $colour-white, $intensity: 20, $size: 0.4em){
+/* Le mixin "shadow" permet de définir une ombre pour un élément. On peut définir la couleur, l'intensité et la taille de l'ombre. */
+@mixin shadow($colour: $colour-white, $intensity: 30, $size: 0.4em){
     filter: drop-shadow(0 0 $size lightdark($intensity, $colour));
 }
 
+/* Le mixin "btn" regroupe des règles pour un bouton. Il définit la largeur minimale, les marges internes, la forme des bords, la couleur, le curseur et des styles d'ombre et de dégradé. */
 @mixin btn {
     min-width: 170px;
     padding: 1em 1.5em;
@@ -47,8 +50,7 @@
                 user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
 }
-/* scss du like */
-
+/* Mixin pour le bouton like*/ 
 @mixin like {
     display: flex;
     align-items: center;
