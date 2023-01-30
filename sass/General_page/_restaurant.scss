@@ -72,7 +72,15 @@
                     overflow: hidden;
                     cursor: pointer;
                     transition: filter 300ms;
-                    
+                    &:hover {
+                        .card_check {
+                            margin-right: 0;
+                            i {
+                                animation: rotation-360 500ms 200ms;
+                                animation-iteration-count: 1;
+                            }
+                        }
+                    }
                     &_container {
                         display: flex;
                         padding: 0.7em;

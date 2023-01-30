@@ -3,7 +3,10 @@
 /* function des couleur*/
 /* ajout du mixin (stockage de groupe de code) */
 /* regrouper des règles CSS réutilisables en un seul endroit pour une utilisation ultérieure dans le code. */
-/* scss du like */
+/* Le mixin "gradient_s-to-p" regroupe des règles CSS pour un fond dégradé allant du couleur secondaire au couleur primaire. */
+/* Le mixin "shadow" permet de définir une ombre pour un élément. On peut définir la couleur, l'intensité et la taille de l'ombre. */
+/* Le mixin "btn" regroupe des règles pour un bouton. Il définit la largeur minimale, les marges internes, la forme des bords, la couleur, le curseur et des styles d'ombre et de dégradé. */
+/* Mixin pour le bouton like*/
 /* ajout du responsive pour la tablette */
 /* ajout du responsive pour le desktop */
 /*style pour les element cache */
@@ -51,6 +54,7 @@
   }
 }
 /* ajout des variable */
+/*  réinitialise les styles par défaut des navigateurs pour garantir une uniformité de l'affichage des éléments HTML sur différents navigateurs.*/
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset,
 legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -189,7 +193,7 @@ a {
   cursor: pointer;
   background-color: #FF79DA;
   background-image: linear-gradient(transparent, #9356DC);
-  filter: drop-shadow(0 0 0.4em #cccccc);
+  filter: drop-shadow(0 0 0.4em #b3b3b3);
   transition: filter 500ms, background-color 300ms 200ms;
 }
 .btn--icon {
@@ -199,7 +203,7 @@ a {
   height: 2.5em;
 }
 .btn:hover {
-  filter: drop-shadow(0 0 0.4em #999999);
+  filter: drop-shadow(0 0 0.4em gray);
   background-color: #fface8;
 }
 
@@ -441,7 +445,7 @@ main {
   border-radius: 1em;
   padding: 1.5em 2em;
   background-color: #ffffff;
-  filter: drop-shadow(0 0 0.4em #cccccc);
+  filter: drop-shadow(0 0 0.4em #b3b3b3);
   transition: all 300ms;
 }
 @media screen and (min-width: 1000px) {
@@ -468,7 +472,7 @@ main {
 }
 .howto_container_cards_item:hover {
   background-color: #f2eafb;
-  filter: drop-shadow(0 0 0.4em #999999);
+  filter: drop-shadow(0 0 0.4em gray);
 }
 .howto_container_cards_item:hover i {
   color: #9356DC;
@@ -504,7 +508,7 @@ main {
   flex-direction: column;
   border-radius: 1em;
   background-color: #ffffff;
-  filter: drop-shadow(0 0 0.4em #cccccc);
+  filter: drop-shadow(0 0 0.4em #b3b3b3);
   transition: all 300ms;
 }
 @media screen and (min-width: 1000px) {
@@ -619,11 +623,7 @@ main {
   background-color: #ffffff;
   overflow: hidden;
   cursor: pointer;
-  filter: drop-shadow(0 0 0.4em #cccccc);
   transition: filter 300ms;
-}
-.restmenu_container_menu_part .card:hover {
-  filter: drop-shadow(0 0 0.4em #b0e8da);
 }
 .restmenu_container_menu_part .card:hover .card_check {
   margin-right: 0;
