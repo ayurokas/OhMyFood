@@ -472,7 +472,7 @@ main {
 }
 .howto_container_cards_item:hover {
   background-color: #f2eafb;
-  filter: drop-shadow(0 0 0.4em gray);
+  filter: drop-shadow(0 0 0.4em #999999);
 }
 .howto_container_cards_item:hover i {
   color: #9356DC;

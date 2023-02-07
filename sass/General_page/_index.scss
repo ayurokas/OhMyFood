@@ -101,7 +101,7 @@
                 transition: all 300ms;
                 &:hover {
                     background-color: lightdark(35, $colour-primary);
-                    @include shadow(lightdark(20));
+                    @include shadow(lightdark(10));
                     & i {
                         color: $colour-primary;
                     }
