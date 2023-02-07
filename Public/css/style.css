@@ -624,6 +624,7 @@ main {
   overflow: hidden;
   cursor: pointer;
   transition: filter 300ms;
+  /* css du check validator 500ms avec une courbe de vitesse*/
 }
 .restmenu_container_menu_part .card:hover .card_check {
   margin-right: 0;

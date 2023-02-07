@@ -101,6 +101,7 @@
                             align-self: flex-end;
                         }
                     }
+                    /* css du check validator 500ms avec une courbe de vitesse*/ 
                     &_check {
                         display: flex;
                         margin-right: -3.5em;
@@ -111,6 +112,7 @@
                         color: $colour-white;
                         background-color: $colour-accent;
                         transition: margin-right 500ms ease-in-out;
+
                     }
                 }
             }
